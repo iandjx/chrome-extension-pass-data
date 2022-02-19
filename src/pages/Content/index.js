@@ -1,4 +1,4 @@
-import { createElement, useState } from 'react';
+import { createElement, useState, useEffect } from 'react';
 import { printLine } from './modules/print';
 import { render } from 'react-dom';
 import { request, gql } from 'graphql-request';
@@ -84,6 +84,10 @@ function MyVerticallyCenteredModal(props) {
 
 function App() {
   const [modalShow, setModalShow] = React.useState(false);
+
+  useEffect(() => {
+
+  }, []);
 
   return (
     <>

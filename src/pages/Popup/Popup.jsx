@@ -10,13 +10,13 @@ async function injectTheScript3() {
 
   chrome.storage.sync.set({ currentURL: tab.url });
 
-  // chrome.runtime.reload();
-  // await chrome.scripting.executeScript({
-  //   target: {
-  //     tabId: tab.id,
-  //   },
-  //   files: ['contentScript.bundle.js'],
-  // });
+  chrome.runtime.reload();
+  await chrome.scripting.executeScript({
+    target: {
+      tabId: tab.id,
+    },
+    files: ['contentScript.bundle.js'],
+  });
 }
 
 const Popup = () => {
